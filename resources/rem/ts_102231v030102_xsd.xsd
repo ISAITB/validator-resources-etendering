@@ -93,7 +93,8 @@ then that text shall prevail as the authoritative source
 	</xsd:complexType>
 	<!--NonEmptyURIType-->
 	<xsd:simpleType name="NonEmptyURIType">
-		<xsd:restriction base="xsd:anyURI">
+		<!-- added a relaxation to the NonEmptyURIType in order to accept peppol identifiers -->
+		<xsd:restriction base="xsd:string">
 			<xsd:minLength value="1"/>
 		</xsd:restriction>
 	</xsd:simpleType>
