@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:asic="http://www.esens.eu/xml/schema/e-delivery/1.0" targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+		   xmlns:bc="http://peppol.eu/xsd/ticc/envelope/1.0" 
+		   targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" 
+		   elementFormDefault="qualified" 
+		   attributeFormDefault="unqualified">
 
-	<xs:import schemaLocation="edelivery_asic.xsd" namespace="http://www.esens.eu/xml/schema/e-delivery/1.0"/>
+	<xs:import schemaLocation="edelivery_asic.xsd" namespace="http://peppol.eu/xsd/ticc/envelope/1.0"/>
 
 	<xs:redefine schemaLocation="../sbdh/StandardBusinessDocumentHeader.xsd">
 		<xs:complexType name="StandardBusinessDocument">
@@ -9,11 +14,10 @@
 				<xs:restriction base="StandardBusinessDocument">
 					<xs:sequence>
 						<xs:element ref="StandardBusinessDocumentHeader"/>
-						<xs:element ref="asic:Asic"/>
+						<xs:element ref="bc:BinaryContent"/>
 					</xs:sequence>
 				</xs:restriction>
 			</xs:complexContent>		
 		</xs:complexType>
 	</xs:redefine>
-
 </xs:schema>
