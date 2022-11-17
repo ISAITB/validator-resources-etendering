@@ -250,6 +250,10 @@
             <assert id="PEPPOL-T011-R078" flag="fatal" test="count(rim:Value) > 0">A Value for each SlotValue MUST be given.</assert>
         </rule>
 
+        <rule context="*/rim:SlotValue[@xsi:type='rim:CollectionValueType']">
+            <assert id="PEPPOL-T011-R082" flag="fatal" test="count(rim:Element) > 0">At least one Element for each SlotValue with CollectionValueType MUST be given.</assert>
+        </rule>
+
         <rule context="*/rim:SlotValue[@xsi:type='rim:CollectionValueType']/rim:Element">
             <assert id="PEPPOL-T011-R079" flag="fatal" test="@xsi:type='rim:StringValueType'">rim:Element be of type rim:StringValueType.</assert>
             <assert id="PEPPOL-T011-R080" flag="fatal" test="count(rim:Value) > 0">At least one element MUST be given in a CollectionValueType.</assert>
