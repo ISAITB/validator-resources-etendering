@@ -4,4 +4,4 @@ File `resources\application-etendering.properties` contains the configuration th
 
 To publish changes commit and push your updates. In 1-2 minutes the online service will be updated.
 
-The online service is accessible at https://www.itb.ec.europa.eu/etendering/upload and the web service WSDL at https://www.itb.ec.europa.eu/etendering/api/validation?wsdl.
+The online service is accessible at https://www.itb.ec.europa.eu/etendering/upload and the web service WSDL at https://www.itb.ec.europa.eu/etendering/api/validation?wsdl. 
